@@ -14,6 +14,11 @@ variable "name" {
   description = "(Required) Log Analytics workspace name"
 }
 
+variable "retention_in_days" {
+  description = "(Optional) Retention in days"
+  default     = 30
+}
+
 variable "solution_plan_map" {
   description = "(Optional) Map structure containing the list of solutions to be enabled."
   type = map(any)
